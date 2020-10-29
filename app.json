@@ -71,14 +71,6 @@
       "description": "Enter your custom leech command like /leech@urgroupname and so on. Default is /leech",
       "required": false
     },
-    "INDEX_LINK": {
-      "description": "Enter your index link:",
-      "required": false
-    },
-    "GLEECH_COMMAND": {
-      "description": "Enter your custom gleech command like /gleech1@urgroupname and so on. Default is /gleech",
-      "required": false
-    },
     "TELEGRAM_LEECH_COMMAND_G": {
       "description": "Enter your custom tleech command like /tleech1@urgroupname and so on. Default is /tleech",
       "required": false
@@ -97,14 +89,6 @@
     },
     "GET_SIZE_G": {
       "description": "Enter your custom getsize command like getsize@urgroupname and so on. Default is /getsize.",
-      "required": false
-    },
-    "RCLONE_CONFIG": {
-      "description": "Enter your copied text from rclone config. Compulsory for /gleech as well as /tleech command ",
-      "required": false
-    },
-    "DESTINATION_FOLDER": {
-      "description": "Enter your Cloud folder NAME(not ID😅) in which you want to upload/store your files.",
       "required": false
     },
     "CUSTOM_FILE_NAME": {
