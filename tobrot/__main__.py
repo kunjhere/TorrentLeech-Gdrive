@@ -25,7 +25,6 @@ from tobrot import (
     AUTH_CHANNEL,
     LEECH_COMMAND,
     YTDL_COMMAND,
-    GLEECH_COMMAND,
     TELEGRAM_LEECH_COMMAND_G,
     CANCEL_COMMAND_G,
     GET_SIZE_G,
@@ -34,7 +33,6 @@ from tobrot import (
     CLEAR_THUMBNAIL,
     PYTDL_COMMAND_G,
     LOG_COMMAND,
-    CLONE_COMMAND_G
 )
 
 from pyrogram import Client, filters
@@ -75,31 +73,12 @@ if __name__ == "__main__" :
         incoming_message_f,
         filters=filters.command(["leech"]) & filters.chat(chats=AUTH_CHANNEL)
     )
-    app.add_handler(incoming_message_handler)
-    #
-    incoming_gdrive_message_handler = MessageHandler(
-        incoming_gdrive_message_f,
-        filters=filters.command(["gleech"]) & filters.chat(chats=AUTH_CHANNEL)
-    )
-    app.add_handler(incoming_gdrive_message_handler)
-    #
-    incoming_telegram_download_handler = MessageHandler(
-        down_load_media_f,
-        filters=filters.command([f"{TELEGRAM_LEECH_COMMAND_G}"]) & filters.chat(chats=AUTH_CHANNEL)
-    )
     app.add_handler(incoming_telegram_download_handler)
     #
     incoming_purge_message_handler = MessageHandler(
         incoming_purge_message_f,
         filters=filters.command(["purge"]) & filters.chat(chats=AUTH_CHANNEL)
     )
-    app.add_handler(incoming_purge_message_handler)
-    #
-    incoming_clone_handler = MessageHandler(
-        g_clonee,
-        filters=filters.command(["gclone"]) & filters.chat(chats=AUTH_CHANNEL)
-    )
-    app.add_handler(incoming_clone_handler)
     #
     incoming_size_checker_handler = MessageHandler(
         check_size_g,
